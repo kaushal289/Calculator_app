@@ -98,13 +98,13 @@ class _GridScreenState extends State<CalculatorScreen> {
 
   Color _condition(value) {
     if (value == "C") {
-      return Colors.red;
+      return Color.fromARGB(255, 255, 17, 0);
     } else if (value == "=") {
-      return Colors.blueGrey;
+      return Color.fromARGB(255, 21, 255, 0);
     } else if (value == "<-") {
-      return Colors.black87;
+      return Color.fromARGB(221, 255, 0, 0);
     }
-    return Colors.blueAccent;
+    return Color.fromARGB(255, 0, 0, 0);
   }
 
   _calculate(String operation, double firstNumber, double secondNumber) {
@@ -144,8 +144,9 @@ class _GridScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Grid Screen"),
+          title: const Text("Calculator"),
           centerTitle: true,
+          backgroundColor: Colors.black,
         ),
         body: Column(
           children: [
