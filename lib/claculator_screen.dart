@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class CalculatorScreen extends StatefulWidget {
@@ -146,7 +148,7 @@ class _GridScreenState extends State<CalculatorScreen> {
         appBar: AppBar(
           title: const Text("Calculator"),
           centerTitle: true,
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 155, 132, 132),
         ),
         body: Column(
           children: [
@@ -156,14 +158,16 @@ class _GridScreenState extends State<CalculatorScreen> {
                 controller: _outputController,
                 textAlign: TextAlign.end,
                 enabled: false,
-                keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.numbers, color: Colors.black87),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
-                      Radius.circular(10),
+                      Radius.circular(5),
+                      
                     ),
                   ),
+                ),
+                style: const TextStyle(
+                  fontSize: 30,
                 ),
                 onChanged: (value) {},
               ),
@@ -184,7 +188,7 @@ class _GridScreenState extends State<CalculatorScreen> {
                         child: Text(
                           buttons[i],
                           style: const TextStyle(
-                              fontSize: 18, color: Colors.white),
+                              fontSize: 30, color: Colors.white),
                         ),
                       ),
                     ),
@@ -193,6 +197,7 @@ class _GridScreenState extends State<CalculatorScreen> {
               ),
             )
           ],
-        ));
+        )
+      );
   }
 }
